@@ -1,0 +1,14 @@
+{
+  "name": "masterbibliotekarestapi",
+  "version": "0.0.1",
+  "description": "This is ReastAPI for my master ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vesna Petkovic",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
