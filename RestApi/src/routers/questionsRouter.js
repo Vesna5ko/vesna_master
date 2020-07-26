@@ -6,6 +6,8 @@ router
 .route('/questions')
 .get(questionsController.question)
 
-
+router
+.route('/questionjob')
+.get(questionsController.questionjob)
 
 module.exports = router;
