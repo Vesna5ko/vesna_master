@@ -1,18 +1,25 @@
 const express = require("express");
 const app = express();
+const cors = require('cors')
 
-const helloworldRouter = require('./routers/helloWorldRouter');
-const questionsRouter = require('./routers/questionsRouter');
-const answersRouter = require('./routers/answersRouter');
+require('./models/db')
+
+const helloWorldRouter = require('./routers/helloWorldRouter');
+const booksRouter = require('./routers/booksRouter');
+
+
 
 // We must add parser before setting routes
 app.use(express.json());
+app.use(cors());
 
-// Set rootes as late as possible so that all setting before do have effect
-app.use('/api', helloworldRouter);
-app.use('/api', questionsRouter);
-app.use('/api', answersRouter);
+// Set roots as late as possible so that all setting before do have effect
+app.use('/api', helloWorldRouter);
+app.use('/api', booksRouter);
 
-app.listen(3000, () => {
-    console.log("Server running on port 3000");
+
+
+const port = process.env.PORT || 9000;
+app.listen(9000, () => {
+    console.log("Server running on port 9000");
 });
