@@ -1,5 +1,5 @@
 # Ignore the node_modules directory
-node_modules/
+/node_modules
 
 # Ignore Logs
 logs
@@ -12,6 +12,6 @@ logs
 .env
 
 # Ignore IDE specific files
-.idea/
-.vscode/
+.idea
+.vscode
 *.sw*
